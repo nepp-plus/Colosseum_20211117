@@ -66,8 +66,10 @@
 
         <TextView
             android:id="@+id/txtReplyCount"
+            android:background="@drawable/gray_border_box"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="답글 : 0개" />
 
         <TextView
@@ -77,6 +79,8 @@
 
         <TextView
             android:id="@+id/txtLikeCount"
+            android:background="@drawable/gray_border_box"
+            android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="좋아요 : 0개" />
@@ -84,6 +88,9 @@
         <TextView
             android:id="@+id/txtDislikeCount"
             android:layout_width="wrap_content"
+            android:background="@drawable/gray_border_box"
+            android:padding="10dp"
+            android:layout_marginStart="5dp"
             android:layout_height="wrap_content"
             android:text="싫어요 : 0개" />
 
