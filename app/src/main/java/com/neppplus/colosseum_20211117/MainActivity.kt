@@ -3,6 +3,8 @@ package com.neppplus.colosseum_20211117
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import com.neppplus.colosseum_20211117.adapters.TopicAdapter
 import com.neppplus.colosseum_20211117.databinding.ActivityMainBinding
@@ -24,7 +26,9 @@ class MainActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView( this, R.layout.activity_main)
         setupEvents()
         setValues()
+        setCustomActionBar()
     }
+
 
     override fun setupEvents() {
 
@@ -40,6 +44,7 @@ class MainActivity : BaseActivity() {
         }
 
     }
+
 
     override fun setValues() {
 
