@@ -3,6 +3,7 @@ package com.neppplus.colosseum_20211117
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
@@ -58,6 +59,11 @@ class MainActivity : BaseActivity() {
         mTopicAdapter = TopicAdapter(mContext, R.layout.topic_list_item, mTopicList)
 
         binding.topicListView.adapter = mTopicAdapter
+
+//        액션바의 뒤로가기 버튼 숨김 ( 상속 받은 변수 활용 )
+
+        btnBack.visibility = View.GONE
+
 
     }
 
