@@ -36,7 +36,16 @@ class ViewReplyDetailActivity : BaseActivity() {
             ServerUtil.postRequestReReply(mContext, mReplyData.id, inputContent, object : ServerUtil.JsonResponseHandler {
                 override fun onResponse(jsonObj: JSONObject) {
 
+//                    1. 댓글 목록 새로고침
+                    getReplyDetailFromServer()
 
+                    runOnUiThread {
+
+//                        2. 입력칸 비워주기
+                        binding.edtContent.setText("")
+
+
+                    }
 
                 }
 
@@ -86,6 +95,11 @@ class ViewReplyDetailActivity : BaseActivity() {
                 runOnUiThread {
 
                     mReReplyAdapter.notifyDataSetChanged()
+
+
+//                        3. 리스트뷰를 맨 밑 (20개 -> 19번 : 갯수-1번째칸)으로 스크롤해주기
+
+                    binding.reReplyListView.smoothScrollToPosition(mReReplyList.size - 1)
 
                 }
 
